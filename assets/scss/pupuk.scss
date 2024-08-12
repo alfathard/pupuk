@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+$primary-color : #05656b;
+$secondary-color : #47dfa7;
+$third-color : #ffb74b;
+$text-color : #343a40;
+
+@mixin mainbanner($justifycontent : center) {
+  display: flex;
+  justify-content: $justifycontent;
+}
+
+@mixin btn-tosca(){
+  padding: 10px 30px;
+  background-color: $secondary-color;
+  border-radius: 25px;
+  color: #fff;
+  border: 0;
+
+  &:hover{
+    cursor: pointer;
+    background-color: #30b684;
+  }
+}
+
+body{
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+}
+
+.container{
+  width: 100%;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container2{
+  width: 100%;
+  max-width: 950px;
+}
+
+.text-xs{
+  font-size: 12px;
+}
+
+.text-sm{
+  font-size: 14px;
+}
+
+.text-lg{
+  font-size: 32px;
+}
+
+.header {
+  background-color: $primary-color;
+  position: sticky;
+  top: 0;
+  @include mainbanner();
+  z-index: 9;
+
+  .navbar {
+    @include mainbanner(space-between);
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+
+    .hamburger {
+      display: none;
+    }
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: #ffffff;
+    }
+
+    .nav-logo{
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      cursor: pointer;
+    }
+
+    .nav-menu{
+      @include mainbanner(space-between);
+      align-items: center;
+      margin-left: auto;
+
+      .nav-item{
+        list-style: none;
+        margin-left: 5rem;
+
+        &:hover{
+          color: #b5b7b7;
+          cursor: pointer;
+        }
+
+        .nav-link{
+          list-style: none;
+          color: #fff;
+          text-decoration: none;
+          display: inline-block;
+        }
+      }
+
+      .btn-hubungi{
+        @include btn-tosca();
+      }
+    }
+  }
+}
+
+.head{
+  @include mainbanner();
+  background-color: $primary-color;
+  background-image: url("../images/bg-top3.png");
+  background-position-y: bottom;
+  background-repeat-y: no-repeat;
+  height: 475px;
+  color: #fff;
+
+  .container2{
+    @include mainbanner(space-between);
+    margin-top: 12px;
+
+    .left{
+      font-size: 55px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .right{
+
+      ul{
+        padding-inline-start: 0;
+
+        li{
+          list-style: none;
+
+          span{
+            font-size: 18px;
+            line-height: 2;
+          }
+
+          a{
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .reado{
+        margin-top: 35px;
+
+        a{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.player{
+  @include mainbanner();
+
+  .container2{
+    justify-content: center;
+    display: flex;
+
+    .video-player{
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 340px;
+      text-align: center;
+      max-width: 950px;
+
+      video{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+      }
+    }
+  }
+}
+
+.probiotik{
+  @include mainbanner();
+  margin-top: 21rem;
+
+  .container2{
+    @include mainbanner();
+    align-items: center;
+
+    .left{
+      font-size: 55px;
+      font-weight: bold;
+      line-height: 1.2;
+      color: $primary-color;
+      width: 35rem;
+    }
+
+    .right{
+      margin-left: 9rem;
+      color: $text-color;
+    }
+  }
+}
+
+.nusantara{
+  @include mainbanner();
+  margin-top: 3rem;
+
+  .container{
+    @include mainbanner();
+
+    .product-container{
+      height: 420px;
+      width: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url("../images/bg-g.png") no-repeat;
+      background-size: contain;
+
+      .arrow-prev{
+        background-color: $secondary-color;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 20px 0 0 20px;
+        border: 0;
+        cursor: pointer;
+        z-index: 8;
+      }
+
+      .arrow-next{
+        background-color: $secondary-color;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 0 20px 20px 0;
+        border: 0;
+        cursor: pointer;
+        z-index: 8;
+      }
+
+      .arrow-container{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 15px;
+        width: 420px;
+      }
+    }
+
+    .left{
+      width: 370px;
+      height: 370px;
+      overflow: hidden;
+      margin-left: 14px;
+      border-radius: 500px;
+      margin-top: -19px;
+      display: flex;
+      align-items: center;
+
+      div{
+
+        img{
+          width: auto;
+          margin: auto;
+        }
+      }
+    }
+
+    .right{
+      @include mainbanner();
+      flex-direction: column;
+
+      #sm1{
+        color: $primary-color;
+      }
+
+      #lg1{
+        color: $primary-color;
+        font-weight: 700;
+      }
+
+      #sm2{
+        color: $text-color;
+      }
+
+      .keunggulan{
+        padding: 2rem;
+
+        #sm3{
+          color: $primary-color;
+          font-weight: 800;
+        }
+
+        .keunggulan-ch{
+          display: grid;
+          grid-template-columns: auto auto;
+          margin-top: 15px;
+          grid-gap: 12px;
+
+          div{
+            display: flex;
+            align-items: center;
+
+            label{
+              margin-left: 15px;
+              color: $text-color;
+            }
+          }
+        }
+      }
+
+      .beli{
+
+        .btn-beli{
+          @include btn-tosca();
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+footer{
+  @include mainbanner();
+  width: 100%;
+  background-color: $primary-color;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+
+  #c{
+    @include mainbanner();
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0 4rem 0;
+    max-width: fit-content;
+
+    h1{
+      width: 70%;
+      text-align: center;
+      color: #fff;
+    }
+
+    .btn-hubungi{
+      @include btn-tosca();
+      font-size: 17px;
+    }
+  }
+
+  hr{width: -webkit-fill-available}
+
+  //#cc{
+  //  padding: 0;
+  //}
+
+  #cc{
+
+    .c2{
+      width: 100%;
+      @include mainbanner(space-between);
+      color: #fff;
+      padding-bottom: 10px;
+      align-items: center;
+
+      .logo{
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        padding: 2px;
+      }
+
+      .sosmed{
+        display: flex;
+        align-items: center;
+
+        img{
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+@import "mobile";
+@import "tablet";

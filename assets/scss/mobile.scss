@@ -1,0 +1,202 @@
+@media only screen and (max-width: 768px) {
+  footer{
+    .container{
+      padding-bottom: 2rem;
+    }
+
+    #cc{
+      padding: 0;
+    }
+
+    .c2{
+      flex-direction: column;
+
+      div{
+        margin: 5px;
+      }
+    }
+  }
+
+  .nusantara{
+
+    .container{
+      flex-direction: column;
+      align-items: center;
+
+      .product-container{
+        height: 370px;
+        width: 370px;
+
+        .arrow-container{
+          width: 370px;
+        }
+      }
+
+      .left{
+        width: 330px;
+        height: 330px;
+        overflow: hidden;
+        margin-left: 11px;
+        border-radius: 500px;
+        margin-top: -17px;
+        display: flex;
+        align-items: center;
+
+        .slick-list{
+          margin-top: 10px;
+        }
+      }
+
+      .right{
+        margin-top: 1rem;
+        width: 370px;
+      }
+    }
+
+      .keunggulan{
+        //padding: 1rem 0!important;
+      }
+
+      .btn-beli{
+        width: 100%;
+      }
+
+  }
+
+  .probiotik{
+    margin-top: 2rem;
+
+    .container2{
+      flex-direction: column;
+      align-items: center;
+
+      .left{
+        width: 100%!important;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .right{
+        margin-left: 0!important;
+        text-align: center;
+      }
+    }
+  }
+
+  .video-player{
+    position: unset!important;
+    margin-top: 15px  ;
+  }
+
+  .head{
+
+    .container2{
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+  .navbar{
+    width: auto!important;
+  }
+
+  iframe{
+    display: none;
+  }
+
+  .container2{
+    padding: 0 15px;
+  }
+
+  .nav-menu {
+    position: fixed!important;
+    left: -112%;
+    top: 4rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%!important;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active{
+    padding-inline-start: 0;
+
+    li{
+      margin-left: 0!important;
+
+      a{
+        color: #151515!important;
+      }
+
+      .btn-hubungi{
+        color: #fff!important;
+      }
+    }
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block!important;
+    cursor: pointer;
+    right: 25px;
+  }
+
+  .hamburger.active{
+    position: fixed!important;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .head{
+
+    .left{
+      font-size: 50px!important;
+    }
+  }
+
+  .nusantara{
+
+    .container{
+      padding: 0 0;
+
+      .product-container{
+        width: 360px;
+        height: 360px;
+
+        .arrow-container{
+          width: 355px!important;
+          margin-left: 11px;
+        }
+      }
+
+      .right{
+        width: 355px;
+      }
+    }
+  }
+}
